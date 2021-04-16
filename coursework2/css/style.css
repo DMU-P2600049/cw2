@@ -1,0 +1,164 @@
+/* NOTE: colour scheme black, yellow and #98a3a5 */
+
+/* NOTE: html controls the entire page instead of breaking it up into body and head also. */
+html {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: repeating-linear-gradient(90deg,black,yellow 7%,black 10%);
+}
+
+/* NOTE: video controls the location of the video on the page as well as different borders you can add to it and more. */
+video{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* NOTE: image controls the location same as video, you can also add width to both to control how large you want them on screen. */
+image{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+}
+
+/* NOTE: h1, h2, h3 and p control the headers of the webpages, in this section you can create different colors, fonts, size etc for them individually. */
+h1 {
+  background-color: black;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+h2 {
+  background-color: black;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+h3 {
+  background-color: black;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+p{
+  background-color: black;
+  color: white;
+}
+
+/* NOTE: creating this .col and section allows for a split colom to spread information but also to place images and text next to each other for easier reading and viewing. */
+.col {
+  width: 50%;
+  float: left;
+}
+section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* NOTE: similar to h1... this can be used to create different borders around the text but also to change text color and fonts. */
+footer{
+  padding: 10px;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+/* NOTE: a is used to include href which lets you create a box for instance and allows the box to become a link instead of just the text on the box. */
+a {
+    text-decoration:none;
+    display: block;
+    color: white;
+}
+
+/* NOTE: this is to create a background for the contact page. */
+.container {
+  border-radius: 5px;
+  background-color: black;
+  padding: 5px;
+}
+/* NOTE: this is the start of the animation and menu creation. In this part of code you can see how different sections effect the menu. For instance .menu li:hover controls the color you see when hovering over the menu.  .dropbox show the box that falls down when hovering over a specific box. */
+.menu ul{
+  list-style: none;
+}
+
+.menu{
+  display: inline-block;
+  text-align: center;
+  position:relative;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.menu li:hover{
+  background: #029bd5;
+}
+.menu > ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  background: black;
+  color: #fff;
+}
+.menu > ul > li{
+  position: relative;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  float: left;
+  width: 136px;
+  height: 50px;
+  line-height: 50px;
+}
+.dropbox{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 0;
+}
+.dropbox li{
+  background: black;
+  display: none;
+}
+.dropbox li:hover{
+  background: #029bd5;
+}
+.menu li:hover > .dropbox li{
+  display: block;
+}
+.menu li:hover > .dropbox{
+  perspective: 1000px;
+}
+.menu li:hover > .dropbox li{
+  transform-origin: top;
+  opacity: 0;
+}
+.menu li:hover > .dropbox li:nth-child(1){
+  animation: animation 300ms ease-in-out forwards;
+  animation-delay: -150ms;
+}
+.menu li:hover > .dropbox li:nth-child(2){
+  animation: animation 300ms ease-in-out forwards;
+  animation-delay: 0ms;
+}.menu li:hover > .dropbox li:nth-child(3){
+  animation: animation 300ms ease-in-out forwards;
+  animation-delay: 150ms;
+}
+/* NOTE: keyframes are used to create different points in time where the animation will perform */
+@keyframes animation{
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  50% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
