@@ -82,7 +82,7 @@ a {
 .menu ul{
   list-style: none;
 }
-/* NOTE: This code is externally used as i was having issues with the animation and drop down menus - Link : https://www.youtube.com/watch?v=burQkhA_s20&t=239s */
+/* NOTE: This code is externally used as i was having issues with the animation and drop down menus - Link : https://www.youtube.com/watch?v=burQkhA_s20&t=239s - This code assists with the creating of animaton that the menu bar uses. */
 .menu{
   display: inline-block;
   text-align: center;
