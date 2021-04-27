@@ -82,7 +82,7 @@ a {
 .menu ul{
   list-style: none;
 }
-
+/* NOTE: This code is externally used as i was having issues with the animation and drop down menus - Link : https://www.w3schools.com/howto/howto_css_contact_form.asp. */
 .menu{
   display: inline-block;
   text-align: center;
